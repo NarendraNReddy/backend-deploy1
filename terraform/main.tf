@@ -26,8 +26,8 @@ resource "null_resource" "backend" {
         type     = "ssh"
         user     = "ec2-user"
         password = "DevOps321"
-       # host     = module.backend.private_ip
-         host = module.backend.public_ip
+        host     = module.backend.private_ip
+        # host = module.backend.public_ip
     }
 
     provisioner "file" {
